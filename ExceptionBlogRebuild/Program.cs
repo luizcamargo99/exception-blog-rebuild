@@ -1,6 +1,18 @@
 ﻿
 ExceptionDivideByZeroWithTryCatch();
 
+//void ExceptionDivideByZeroWithTryCatch()
+//{
+//    try
+//    {
+//        PrintDivisionByZero();
+//    }
+//    catch
+//    {
+//        Console.WriteLine("Ocorreu um erro");
+//    }
+
+//}
 
 void ExceptionDivideByZeroWithTryCatch()
 {
@@ -8,12 +20,16 @@ void ExceptionDivideByZeroWithTryCatch()
     {
         PrintDivisionByZero();
     }
-    catch
+    catch (DivideByZeroException)
     {
-        Console.WriteLine("Ocorreu um erro");
+        Console.WriteLine("Entrou no DivideByZeroException");
     }
-
+    catch (Exception)
+    {
+        Console.WriteLine("Entrou no Exception");
+    }
 }
+
 
 void PrintDivisionByZero()
 {
